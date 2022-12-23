@@ -1,0 +1,41 @@
+<p>cartpage works!</p>
+<div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>product id</th>
+            <th>product image</th>
+            <th>product name</th>
+            <th>product cost</th>
+            <th>stock</th>
+            <th>description</th>
+            <th>quantity added</th>
+            <th>total cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of cp">
+            <td>{{p.pro.prod_id}}</td>
+            <td>
+              <img src="{{p.pro.prod_img_link}}"  width="100" height="100">
+            </td>
+            <td>{{p.pro.prod_name}}</td>
+            <td>{{p.pro.prod_cost}}</td>
+            <td>{{p.pro.prod_stock}}</td>
+            <td>{{p.pro.prod_desc}}</td>
+            <td>
+              
+{{p.quantity}}
+                
+    
+    
+    
+            </td>
+            <td>
+              {{p.pro.prod_cost*p.quantity}}
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>

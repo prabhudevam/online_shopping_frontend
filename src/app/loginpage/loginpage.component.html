@@ -1,0 +1,35 @@
+<html>
+  <style>
+    .bg {
+      background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fdoor%2F&psig=AOvVaw0QAeofKSH7tmPU2dap9uQ9&ust=1591714766333000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDRhty98ukCFQAAAAAdAAAAABAJ');
+    }
+    </style>
+<body class="bg">
+<div class="container">
+    <div class="logo">login </div>
+    <div class="register-item">
+      <form #myform="ngForm" (ngSubmit)="authen()" class="form form-register">
+
+        <div class="form-field">
+              <label class="user" for="username"><span class="">Name</span></label>
+              <input name="name" id="username" type="text" class="form-input" placeholder="Name" required [(ngModel)]="u.username">
+        </div>
+       
+
+        <div class="form-field">
+          <label class="lock" for="password"><span class="">Password</span></label>
+          <input name="password" id="password" type="password" class="form-input" placeholder="Password" required [(ngModel)]="u.password">
+        </div>
+
+        <div class="form-field">
+          <input type="submit" value="login">
+         
+        </div>
+      </form>
+      <button type="button" class="btn btn-danger" (click)="signup()">signup</button>
+
+    </div>
+</div>
+</body>
+</html>
+<router-outlet></router-outlet>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <router-outlet></router-outlet>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="xy">
+  
+
+<div class="container">
+  <h2> welcome {{uk}} list of products</h2>
+        
+  <table class="table">
+    <thead>
+      <tr>
+        <th>product id</th>
+        <th>product image</th>
+        <th>product name</th>
+        <th>product cost</th>
+        <th>stock</th>
+        <th>description</th>
+        <th>actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of pro">
+        <td>{{p.prod_id}}</td>
+        <td>
+          <img src="{{p.prod_img_link}}"  width="100" height="100">
+        </td>
+        <td>{{p.prod_name}}</td>
+        <td>{{p.prod_cost}}</td>
+        <td>{{p.prod_stock}}</td>
+        <td>{{p.prod_desc}}</td>
+        <td>
+          
+          <button type="button" (click)="addtocart(p.prod_id)" class="btn btn-primary">add to cart</button>&nbsp;&nbsp;
+            <button type="button" (click)="gotoviewprod(p.prod_id)" class="btn btn-success">view</button>&nbsp;&nbsp;
+            
+            
+
+
+
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <button type="button" (click)="gotocartpage()"class="btn btn-info">cartpage</button>
+  
+</div>
+</body>
+</html>

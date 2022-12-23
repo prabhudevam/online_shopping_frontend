@@ -1,0 +1,31 @@
+<p>register here!</p>
+<div class="container">
+    <div class="logo">Create a new account!</div>
+    <div class="register-item">
+      <form #myform="ngForm" (ngSubmit)="register()" class="form form-register">
+
+        <div class="form-field">
+              <label class="user" for="register-username"><span class="hidden">Name</span></label>
+              <input name="name" id="username" type="email" class="form-input" placeholder="Name" required [(ngModel)]="s.username">
+        </div>
+        <div class="form-field">
+          <label class="user" for="register-email"><span class="hidden">Email</span></label>
+          <input name="email" id="email" type="email" class="form-input" placeholder="Email"required [(ngModel)]="s.email" >
+        </div>
+
+        <div class="form-field">
+          <label class="lock" for="register-password"><span class="hidden">Password</span></label>
+          <input name="password" id="register-password" type="password" class="form-input" placeholder="Password" required [(ngModel)]="s.password">
+        </div>
+       
+        <div class="form-field">
+          <label class="lock" for="register-password"><span class="hidden">Password</span></label>
+          <input name="password" id="register-password" type="password" class="form-input" placeholder="Password" required >
+        </div>
+        <div class="form-field">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+</div>
+<router-outlet></router-outlet>
